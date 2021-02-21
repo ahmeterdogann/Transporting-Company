@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Profilim</title>
+        <h:outputStylesheet library="css" name="bootstrap.css"/>
+        <link href="resources/css/profilim.css" rel="stylesheet"/>
+        <link href="resources/css/bootstrap.css" rel="stylesheet"/>
+    </h:head>
+    <h:body>        
+        <div class="card container" style="width: 26rem;" >
+            <ul class="list-group list-group-flush">
+               
+                <li class="list-group-item" ><b>Adınız :</b>#{userBean.name}</li>
+                <li class="list-group-item"><b>Soyadınız : </b>#{userBean.surName} </li>
+                <li class="list-group-item"><b>Kullanıcı Adınız : </b>#{userBean.username}</li>
+                <li class="list-group-item"><b>E-Posta : </b>#{userBean.email}</li>
+                <li class="list-group-item"><b>Telefon Numaranız : </b> #{userBean.telno}</li>
+                <li class="list-group-item"><b>Rezervasyon Bilgileriniz : </b> #{userBean.dateRez()}</li>
+            </ul>
+        </div>
+<center>
+        <div class="update">
+        <h:form>
+            
+                
+                    <b>Rezervasyon Tarihini Güncelle</b><br/>
+           <h:inputText class="center-middle-elements-form-input" value="#{rezervasyonBean.newDate}" a:placeholder="GG/AA/YYYY"/>
+           <h:commandButton value="GÜNCELLE" action="#{rezervasyonBean.updateRezDate()}">
+                            <f:actionListener binding="#{rezervasyonBean.rezervasyonVarMi()}"/> <!-- İlk önce bu çalışır -->
+                            <br/>
+                            <h:outputText value="#{rezervasyonBean.updateErr}"/>
+            </h:commandButton> 
+        
+            
+        
+        </h:form>
+            
+           </div>
+    </center>
+        <center>
+        <div class="iptal">
+        <h:form>
+            
+                <b>Rezervasyonu İptal Et</b><br/>
+           <h:commandButton value="İPTAL ET" action="#{rezervasyonBean.rezervasyonIptal()}">
+                            <f:actionListener binding="#{rezervasyonBean.rezervasyonVarMi()}"/><!-- İlk önce bu çalışır -->
+                            <br/>
+                            <h:outputText value="#{rezervasyonBean.iptalErr}"/>
+            </h:commandButton> 
+        
+            
+        
+        </h:form>
+           </div>
+            </center>
+    </h:body>
+</html>
+

@@ -1,0 +1,52 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11.May.2020, 18:51:28
+    Author     : AhmetERDOĞAN
+*/
+.tasıma{
+    width: 357px;
+    height: 219px;
+    background-color: #d1ecf1;
+    margin-top:40px;
+    margin-left: 194px;
+    float: left;
+}
+
+.nerden{
+    width: 357px;
+    height: 332px;
+    background-color: #d1ecf1;
+    margin-top:40px;
+    margin-left: 50px;
+    float: left;
+}
+
+.nereye{
+    width: 357px;
+    height: 332px;
+    background-color: #d1ecf1;
+    margin-top:40px;
+    margin-left: 50px;
+    float: left;
+}
+
+.tarih{
+    width: 357px;
+    height: 80px;
+    background-color: #d1ecf1;
+    margin-top:-79px;
+    margin-left: 193px;
+    float: left;
+}
+
+.button{
+    margin-top:40px;
+    margin-left: 130px;
+    float: left;
+}
+
+

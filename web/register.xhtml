@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Kayıt Ol</title>
+        <style>
+    #container
+    {
+        width: 400px;
+        height: 314px;
+        background-color: #d1ecf1;
+        margin-top:226px;
+        margin-left:563px;
+    }
+</style>
+    </h:head>
+    
+    <h:body>
+        <div id="container">
+        <h:form>
+		<h3>Kayıt Formu</h3>
+		<h:panelGrid columns="3">
+			<h:outputLabel for="name">Ad :</h:outputLabel>
+			<h:inputText value="#{userBean.name}"></h:inputText>
+			<br/>
+			<br/>
+
+			<h:outputLabel for="surname">Soyad :</h:outputLabel>
+			<h:inputText value="#{userBean.surName}"></h:inputText>
+			<br/>
+			<br/>
+
+			<h:outputLabel for="username">Kullanıcı Adı :</h:outputLabel>
+			<h:inputText value="#{userBean.username}"></h:inputText>
+			<br/>
+			<br/>
+
+			<h:outputLabel for="email">E-Posta:</h:outputLabel>
+			<h:inputText value="#{userBean.email}"></h:inputText>
+			<br/>
+			<br/>
+
+			<h:outputLabel for="telno">Telefon Numarası :</h:outputLabel>
+			<h:inputText value="#{userBean.telno}"></h:inputText>
+			<br/>
+			<br/>
+                        
+                        <h:outputLabel for="password">Şifre :</h:outputLabel>
+			<h:inputText value="#{userBean.password}"></h:inputText>
+			<br/>
+			<br/>
+			<h:commandButton action="#{userBean.register()}" value="Kayıt Ol">
+                                <f:actionListener binding="#{userBean.kullaniciAdiKontrol()}"/> 
+                                <br/><br/><br/><br/><br/><br/><!-- İlk önce bu çalışır -->
+                                <h:outputText value="#{userBean.regErr}"/>
+                        </h:commandButton>
+
+		</h:panelGrid>
+	</h:form>
+            </div>
+    </h:body>
+</html>

@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Hakkımızda</title>
+        <h:outputStylesheet library="css" name="bootstrap.css"/>
+        <link href="resources/css/hakkimizda.css" rel="stylesheet"/>
+        <link href="resources/css/bootstrap.css" rel="stylesheet"/>
+        <style>
+           .body{
+    background-color: #d1ecf1;
+   
+    }
+       </style>
+    </h:head>
+    <h:body class="body">
+      
+       
+    <center><h1>HAKKIMIZDA</h1></center>
+       
+        <p class ="yazılar">Şirketimiz 2004 yılında İstanbul Avcılarda hizmetine başladı ve 2008 yılında Ankara ve 2012 yılında İzmir'de şubeler açarak hedefini ve 
+        müşteri kitlesini genişletti. 16 yıldır şehiriçi ve şehirler arası nakliyede sizlere hızlı, güvenilir ve hesaplı bir hizmet vermekteyiz</p><br/>
+        
+    <center><h3>Şubelerimiz</h3></center>
+        
+        <h:form>
+            <div class="card">
+    <div class="card-body">
+        <div class="card sirketler" style="width: 26rem;" >
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" ><b>Şube</b> :  #{nakliyeBean.getSubeBilgileri("34341", "SEHIR")} Şubesi</li>
+                <li class="list-group-item"><b>Telefon Numarası</b> : #{nakliyeBean.getSubeBilgileri("34341", "TEL_NO")} </li>
+                <li class="list-group-item"><b>Personel Sayısı</b>:  #{nakliyeBean.getSubeBilgileri("34341", "PERSONEL_SAYISI")}</li>
+                <li class="list-group-item"><b>Kamyon Sayısı</b> :  #{nakliyeBean.getSubeBilgileri("34341", "KAMYON_SAYISI")}</li>
+            </ul>
+            <div class="card-body">
+                <h:commandButton value="Kamyonlar" action="#{kamyonBean.setSubeIst()}"/>
+            </div>
+        </div>
+
+         <div class="card sirketler" style="width: 26rem;" >
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" ><b>Şube</b> :  #{nakliyeBean.getSubeBilgileri("06061", "SEHIR")} Şubesi</li>
+                <li class="list-group-item"><b>Telefon Numarası</b> : #{nakliyeBean.getSubeBilgileri("06061", "TEL_NO")} </li>
+                <li class="list-group-item"><b>Personel Sayısı</b>:  #{nakliyeBean.getSubeBilgileri("06061", "PERSONEL_SAYISI")}</li>
+                <li class="list-group-item"><b>Kamyon Sayısı</b> :  #{nakliyeBean.getSubeBilgileri("06061", "KAMYON_SAYISI")}</li>
+            </ul>
+            <div class="card-body">
+                <h:commandButton value="Kamyonlar" action="#{kamyonBean.setSubeAnk()}"/>
+            </div>
+        </div>
+
+         <div class="card sirketler" style="width: 26rem;" >
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item" ><b>Şube</b> :  #{nakliyeBean.getSubeBilgileri("35351", "SEHIR")} Şubesi</li>
+                <li class="list-group-item"><b>Telefon Numarası</b> : #{nakliyeBean.getSubeBilgileri("35351", "TEL_NO")} </li>
+                <li class="list-group-item"><b>Personel Sayısı</b>:  #{nakliyeBean.getSubeBilgileri("35351", "PERSONEL_SAYISI")}</li>
+                <li class="list-group-item"><b>Kamyon Sayısı</b> :  #{nakliyeBean.getSubeBilgileri("35351", "KAMYON_SAYISI")}</li>
+            </ul>
+            <div class="card-body">
+                <h:commandButton value="Kamyonlar" action="#{kamyonBean.setSubeIzm()}"/>
+            </div>
+        </div>
+
+    </div>
+</div>
+        </h:form>
+    </h:body>
+</html>
+

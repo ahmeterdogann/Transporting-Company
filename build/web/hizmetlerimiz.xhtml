@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Hizmetlerimiz</title>
+         <h:outputStylesheet library="css" name="bootstrap.css"/>
+        <link href="resources/css/hizmetlerimiz.css" rel="stylesheet"/>
+        <link href="resources/css/bootstrap.css" rel="stylesheet"/>
+    </h:head>
+    <h:body>
+       
+        <center><h3><b> HİZMETLERİMİZ </b></h3></center>
+        <div class="card cardyeri" style="width: 18rem;">
+                <img class="card-img-top hizmetlerimizimages" src="resources/images/hizmetlerimizimg1.jpg" alt="Card image cap"/>
+            <div class="card-body">
+                <p class="card-text imagesyazılar">Şehiriçi Nakliye</p>
+            </div>
+        </div>
+        <div class="card cardyeri" style="width: 18rem;">
+                <img class="card-img-top hizmetlerimizimages" src="resources/images/hizmetlerimizimg2.png" alt="Card image cap"/>
+            <div class="card-body">
+                <p class="card-text imagesyazılar">Şehirlerarası Nakliye</p>
+            </div>
+        </div>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <div><center><h3><b>Rezervasyonlarımız Hakkında Bazı İstatistikler ve Bilgiler</b></h3></center>
+        </div>
+        <div class="card card3" style="width: 26rem;" >
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><b>En Yüksek Fiyatlı Rezervasyonun Fiyatı : </b>#{bazıSorgularBean.enYuksekRezFiyat()}</li>
+                <li class="list-group-item"><b>En Yüksek Fiyatlı Rezervasyonun Tarihi : </b>#{bazıSorgularBean.enYuksekRezTarih()}</li>
+                <li class="list-group-item"><b>En Yüksek Fiyatlı Rezervasyona Sahip Müşterinin Kullanıcı Adı : </b>#{bazıSorgularBean.enYuksekRezIsim()}</li>
+                <li class="list-group-item"><b>En Yüksek Fiyatlı Rezervasyona Sahip Müşterinin Rezervasyon Bilgileri : </b>#{bazıSorgularBean.enYuksekRezBilgiler()}</li>             
+            </ul>
+        </div>
+    </h:body>
+</html>
+

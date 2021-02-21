@@ -1,0 +1,31 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11.May.2020, 20:40:06
+    Author     : AhmetERDOĞAN
+*/
+
+.container{
+        width: 400px;
+        height: 310px;
+        background-color: #d1ecf1;
+        margin-top:40px;
+       
+}
+
+.update{
+    width: 272px;
+    height: 131px;
+    margin-top: 40px;
+     margin-left: 40px;
+}
+
+.iptal{
+    width: 272px;
+    height: 131px;
+    margin-top: 40px;
+    margin-left: 40px;
+}

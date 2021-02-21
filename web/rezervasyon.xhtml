@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <h:outputStylesheet library="css" name="bootstrap.css"/>
+        <title>Rezervasyon Oluştur</title>
+        <link href="resources/css/rezervasyon.css" rel="stylesheet"/>
+        <link href="resources/css/bootstrap.css" rel="stylesheet"/>
+    </h:head>
+    <h:body>
+        <h:form>
+        <div class="tasıma">
+                    
+                        <h3>Taşıma Bilgileri</h3>
+                        <h:outputText class ="radiobuttontext" value = "Taşıma Türü" />
+                        <h:selectOneRadio enabledClass="radio-inline" value = "#{fiyatBean.mesafe}"> 
+                                <f:selectItem  itemValue = "sehirici" itemLabel = "Şehir içi " /> 
+                                <f:selectItem itemValue = "sehirdisi" itemLabel = "Şehirler arası" />
+                            </h:selectOneRadio>
+                            <h:outputText class ="radiobuttontext" value = "Daire Türünüz" />
+                            <h:selectOneRadio value = "#{fiyatBean.odaSayisi}"> 
+                                <f:selectItem itemValue = "1" itemLabel = "1+0" />
+                                <f:selectItem itemValue = "2" itemLabel = "1+1" />
+                                <f:selectItem itemValue = "3" itemLabel = "2+1" />
+                                <f:selectItem itemValue = "4" itemLabel = "3+1" />
+                                <f:selectItem itemValue = "5" itemLabel = "4+1" />
+                                <f:selectItem itemValue = "7" itemLabel = "5+1 ve fazlası" />
+                            </h:selectOneRadio>
+                            <h:outputText class ="radiobuttontext" value = "Oturduğunuz Kat : " />
+                            <h:inputText class="center-middle-elements-form-input" value="#{fiyatBean.daireKati}" a:placeholder="ex:11"/>
+                            <h:selectOneRadio value = "#{fiyatBean.yukAsansoruVarMı}"> 
+                                <f:selectItem itemValue = "var" itemLabel = "Yük Asansörü Var " /> 
+                                <f:selectItem itemValue = "yok" itemLabel = "Yük Asansörü Yok" />
+                            </h:selectOneRadio>
+        </div>
+        <div class="nerden">
+            
+		<h3>Nerden</h3>
+		<h:panelGrid columns="3">
+			<h:outputLabel for="sehirK">Şehir : </h:outputLabel>
+			<h:inputText value="#{adresBean.sehirK}"></h:inputText>
+			<br/>
+			<br/>
+
+			<h:outputLabel for="ilceK">İlçe : </h:outputLabel>
+			<h:inputText value="#{adresBean.ilceK}"></h:inputText>
+			<br/>
+			<br/>
+
+			<h:outputLabel for="mahalleK">Mahalle : </h:outputLabel>
+			<h:inputText value="#{adresBean.mahalleK}"></h:inputText>
+			<br/>
+			<br/>
+
+			<h:outputLabel for="caddeSokakK">Cadde / Sokak : </h:outputLabel>
+			<h:inputText value="#{adresBean.caddeSokakK}"></h:inputText>
+			<br/>
+			<br/>
+
+			<h:outputLabel for="binaNoH">Bina No : </h:outputLabel>
+			<h:inputText value="#{adresBean.binaNoK}"></h:inputText>
+			<br/>
+			<br/>
+                        
+                        <h:outputLabel for="daireNoK">Daire No : </h:outputLabel>
+			<h:inputText value="#{adresBean.daireNoK}"></h:inputText>
+			<br/>
+			<br/>
+		</h:panelGrid>
+    </div>
+    <div class="nereye">
+        <h3>Nereye</h3>
+		<h:panelGrid columns="3">
+			<h:outputLabel for="sehirH">Şehir : </h:outputLabel>
+			<h:inputText value="#{adresBean.sehirH}"></h:inputText>
+			<br/>
+			<br/>
+
+			<h:outputLabel for="ilceH">İlçe : </h:outputLabel>
+			<h:inputText value="#{adresBean.ilceH}"></h:inputText>
+			<br/>
+			<br/>
+
+			<h:outputLabel for="mahalleH">Mahalle : </h:outputLabel>
+			<h:inputText value="#{adresBean.mahalleH}"></h:inputText>
+			<br/>
+			<br/>
+
+			<h:outputLabel for="caddeSokakH">Cadde / Sokak :</h:outputLabel>
+			<h:inputText value="#{adresBean.caddeSokakH}"></h:inputText>
+			<br/>
+			<br/>
+
+			<h:outputLabel for="binaNoH">Bina No : </h:outputLabel>
+			<h:inputText value="#{adresBean.binaNoH}"></h:inputText>
+			<br/>
+			<br/>
+                        
+                        <h:outputLabel for="daireNoH">Daire No : </h:outputLabel>
+			<h:inputText value="#{adresBean.daireNoH}"></h:inputText>
+			<br/>
+			<br/>
+                </h:panelGrid>
+    </div>
+                
+    <div class="tarih">
+            <h3>Rezervasyon Tarihi </h3>
+		<h:panelGrid columns="3">
+                    
+                    <h:inputText value="#{rezervasyonBean.tarih}" a:placeholder="GG/AA/YYYY"/>
+		</h:panelGrid>
+    </div>      
+                
+        <div class="button">
+            <h:commandButton value="Rezervasyon Oluştur" action="#{rezervasyonBean.create()}">
+               <f:actionListener binding="#{adresBean.insert()}"/> <!-- İlk önce bunlar çalışır -->
+               <f:actionListener binding="#{fiyatBean.insert()}"/>
+           </h:commandButton>
+        </div>     
+	</h:form>
+    </h:body>
+</html>
+

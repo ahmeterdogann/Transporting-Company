@@ -1,0 +1,24 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07.May.2020, 19:08:05
+    Author     : AhmetERDOĞAN
+*/
+
+.yazılar{
+    font-size: 20px;
+}
+
+.sirketler {
+    display: inline-block;
+    margin: 20px;
+    float: left;
+}
+
+.ortala2 {
+  margin-left: auto;
+  margin-right: auto;
+}
